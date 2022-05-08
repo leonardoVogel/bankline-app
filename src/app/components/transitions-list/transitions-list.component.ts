@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./transitions-list.component.css']
 })
 export class TransitionsListComponent implements OnInit {
+  transitions: any;
 
   constructor() { }
 

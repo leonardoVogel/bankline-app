@@ -1,1 +1,20 @@
-<p>transitions-list works!</p>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Date Time</th>
+    <th scope="col">Description</th>
+    <th scope="col">Value</th>
+    <th scope="col">Type</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of transitions; index as i">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>{{ item.dateTime }}</td>
+    <td>{{ item.description }}</td>
+    <td>{{ item.value }}</td>
+    <td>{{ item.type }}</td>
+  </tr>
+  </tbody>
+</table>
