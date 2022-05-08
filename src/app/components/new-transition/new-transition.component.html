@@ -1,1 +1,39 @@
-<p>new-transition works!</p>
+<div class="container">
+  <div class="jumbotron">
+    <h1 class="display-6">Transition</h1>
+    <p class="lead-1">Add a new transition</p>
+    <hr class="my-2">
+    <form class="row g-2">
+      <div class="col-md-3">
+        <label for="iDate" class="form-label">Date</label>
+        <input type="date" class="form-control" id="iDate">
+      </div>
+      <div class="col-md-9">
+        <label for="iClient" class="form-label">Client</label>
+        <select id="iClient" class="form-select">
+          <option selected>Choose...</option>
+          <option>...</option>
+        </select>
+      </div>
+      <div class="col-12">
+        <label for="iDescription" class="form-label">Description</label>
+        <input type="text" class="form-control" id="iDescription" placeholder="Provide a description">
+      </div>
+      <div class="col-md-3">
+        <label for="iType" class="form-label">Transition type</label>
+        <select id="iType" class="form-select">
+          <option selected>Types</option>
+          <option>...</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <label for="iValue" class="form-label">R$ Value</label>
+        <input type="text" class="form-control" id="iValue">
+      </div>
+      <div class="d-grid gap-2 d-md-flex ">
+        <button class="btn btn-outline-primary me-md-2" type="button">Confirm</button>
+        <a routerLink="/transitions" class="btn btn-outline-secondary">Cancel</a>
+      </div>
+    </form>
+    </div>
+</div>
