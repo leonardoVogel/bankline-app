@@ -27,7 +27,7 @@
       </div>
       <div class="col-md-2">
         <label for="iValue" class="form-label">R$ Value</label>
-        <input type="text" class="form-control" id="iValue">
+        <input currencyMask [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" type="text" class="form-control" id="iValue">
       </div>
       <div class="d-grid gap-2 d-md-flex ">
         <button class="btn btn-outline-primary me-md-2" type="button">Confirm</button>
