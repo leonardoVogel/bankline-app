@@ -7,6 +7,9 @@ import { TransitionsListComponent } from './components/transitions-list/transiti
 import { NewTransitionComponent } from './components/new-transition/new-transition.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +19,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

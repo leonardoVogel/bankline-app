@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TransitionService } from 'src/app/services/transition.service';
+
 
 @Component({
   selector: 'app-transitions-list',
@@ -8,9 +10,23 @@ import { Component, OnInit } from '@angular/core';
 export class TransitionsListComponent implements OnInit {
   transitions: any;
 
-  constructor() { }
+  constructor(private transitionService: TransitionService) { }
 
   ngOnInit(): void {
+    this.listTransitions();
+  }
+
+  listTransitions(): void {
+    this.transitionService.list()
+      .subscribe(
+        data => {
+          this.transitions = data;
+          console.log(data);
+        },
+        error => {
+          console.log(error);
+        }
+      );
   }
 
 }
