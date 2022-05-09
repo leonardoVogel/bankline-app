@@ -9,6 +9,8 @@ import { TransitionService } from 'src/app/services/transition.service';
 })
 export class TransitionsListComponent implements OnInit {
   transitions: any;
+  clients: any;
+  selectedClient: any;
 
   constructor(private transitionService: TransitionService) { }
 

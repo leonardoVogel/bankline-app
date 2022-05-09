@@ -1,26 +1,35 @@
 <div class="container">
-
-  <a routerLink="/new-transition" class="btn btn-outline-primary btn-sm">New Transition</a>
-
-  <table class="table table-striped">
+  <div class="jumbotron">
+    <h1 class="display-6">Movimentações</h1>
+    <p class="lead-1">Listagem das movimentações por correntista</p>
+    <hr class="my-2">
+    <div class="input-group">
+      <select  id="iClient" [(ngModel)]="selectedClient" class="form-select">
+        <option *ngFor="let client of clients" [ngValue]="client" >{{client.cpf}}-{{client.nome}}</option>
+      </select>
+    <button class="btn btn-outline-secondary me-md-2 btn-sm" type="button" (click)="listTransitions()">Find</button>
+    <a class="btn btn-outline-primary btn-sm" routerLink="/new-transition">New Transition</a>
+    <a class="btn btn-outline-primary btn-sm" routerLink="/clients">Clients</a>
+  </div>
+<table class="table table-striped">
     <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Date Time</th>
-      <th scope="col">Description</th>
-      <th scope="col">Value</th>
-      <th scope="col">Type</th>
-    </tr>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Date Time</th>
+        <th scope="col">Description</th>
+        <th scope="col">Value</th>
+        <th scope="col">Type</th>
+      </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let item of transitions; index as i">
-      <th scope="row">{{ i + 1 }}</th>
-      <td>{{ item.dateTime | date: 'dd/MM/yyyy HH:mm:ss' }}</td>
-      <td>{{ item.description }}</td>
-      <td [ngStyle]="{'color':item.type === 'INCOME' ? 'blue' : 'red'}">{{ item.value | currency:'BRL' }}</td>
-      <td>{{ item.type }}</td>
-    </tr>
+      <tr *ngFor="let item of transitions; index as i">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ item.dateTime | date: 'dd/MM/yyyy HH:mm:ss' }}</td>
+        <td>{{ item.description }}</td>
+        <td [ngStyle]="{'color':item.type === 'INCOME' ? 'blue' : 'red'}">{{ item.value | currency:'BRL' }}</td>
+        <td>{{ item.type }}</td>
+      </tr>
     </tbody>
   </table>
+  </div>
 </div>
-
