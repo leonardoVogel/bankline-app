@@ -15,6 +15,10 @@ export class TransitionService {
     return this.http.get(`${baseUrl}/transitions`);
   }
 
+  findByAccountId(accountId: any): Observable<any> {
+    return this.http.get(`${baseUrl}/transitions/${accountId}`);
+  }
+
   create(transition: any): Observable<any> {
     return this.http.post(`${baseUrl}/transitions`, transition);
  }
