@@ -11,6 +11,11 @@ export class NewTransitionComponent implements OnInit {
   clients: any;
   selectedClient: any;
 
+  dateTime: any;
+  description: any;
+  value: any;
+  type: any;
+
   constructor(
     private clientService: ClientService,
     private transitionService: TransitionService
@@ -33,4 +38,26 @@ export class NewTransitionComponent implements OnInit {
       );
   }
 
+  save(): void {
+    console.log(this.selectedClient)
+    const transition = {
+      value: this.value,
+      description: this.description,
+      type: this.type,
+      accountId: this.selectedClient.id,
+      dateTime: this.dateTime
+    };
+
+    console.log(transition);
+
+    this.transitionService.create(transition)
+      .subscribe(
+        response => {
+          console.log(response);
+        },
+        error => {
+          console.log(error);
+        }
+      );
+  }
 }

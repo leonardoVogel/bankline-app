@@ -14,4 +14,8 @@ export class TransitionService {
   list(): Observable<any> {
     return this.http.get(`${baseUrl}/transitions`);
   }
+
+  create(transition: any): Observable<any> {
+    return this.http.post(`${baseUrl}/transitions`, transition);
+ }
 }
