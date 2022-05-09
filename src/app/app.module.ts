@@ -15,6 +15,7 @@ import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 
 import { CurrencyMaskModule } from 'ng2-currency-mask';
+import { ClientsComponent } from './components/clients/clients.component';
 
 registerLocaleData(localePt);
 
@@ -22,7 +23,8 @@ registerLocaleData(localePt);
   declarations: [
     AppComponent,
     TransitionsListComponent,
-    NewTransitionComponent
+    NewTransitionComponent,
+    ClientsComponent
   ],
   imports: [
     BrowserModule,
