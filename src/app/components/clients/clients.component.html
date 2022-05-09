@@ -21,9 +21,9 @@
   <p></p>
   <div *ngFor="let item of clients; index as i" class="card" style="width: 18rem;">
     <div class="card-body">
-      <h5 class="card-title">{{item.nome}}</h5>
-      <p class="card-text">Conta N° {{item.conta.numero}}</p>
-      <p class="card-text">Saldo {{item.conta.saldo | currency:'BRL'}}</p>
+      <h5 class="card-title">{{item.name}}</h5>
+      <p class="card-text">Conta N° {{item.account.number}}</p>
+      <p class="card-text">Saldo {{item.account.balance | currency:'BRL'}}</p>
     </div>
   </div>
 </div>
