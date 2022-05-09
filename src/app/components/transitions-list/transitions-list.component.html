@@ -5,7 +5,7 @@
     <hr class="my-2">
     <div class="input-group">
       <select  id="iClient" [(ngModel)]="selectedClient" class="form-select">
-        <option *ngFor="let client of clients" [ngValue]="client" >{{client.cpf}}-{{client.nome}}</option>
+        <option *ngFor="let client of clients" [ngValue]="client" >{{client.cpf}}-{{client.name}}</option>
       </select>
       <button class="btn btn-outline-secondary me-md-2 btn-sm" type="button" (click)="listTransitions()">Find</button>
       <a class="btn btn-outline-primary btn-sm" routerLink="/new-transition">New Transition</a>

@@ -11,7 +11,7 @@
       <div class="col-md-9">
         <label for="iClient" class="form-label">Client</label>
         <select id="iClient" [(ngModel)]="selectedClient" class="form-select">
-          <option *ngFor="let client of clients" [ngValue]="client">{{client.cpf}}-{{client.nome}}</option>
+          <option *ngFor="let client of clients" [ngValue]="client">{{client.cpf}}-{{client.name}}</option>
         </select>
       </div>
       <div class="col-12">
